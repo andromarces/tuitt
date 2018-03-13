@@ -1,2 +1,3 @@
-# tuitt
-Exercises and projects from my time in Tuitt Coding Bootcamp.
+# andromarces.github.io
+
+All exercises and projects during my time in Tuitt can be found here.
