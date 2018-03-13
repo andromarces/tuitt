@@ -1,0 +1,295 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* To avoid overflow */
+}
+
+body {
+	background: url("../img/bg.jpg");
+	background-size: cover;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto; /* To center the wrapper */
+	background-color: #fff;
+}
+
+/*div {
+	padding: 20px;
+}*/
+
+.grandparent {
+	background-color: skyblue;
+	width: inherit; /* Refer to wrapper container's width */
+	position: fixed;
+	bottom: 0;
+	/*left: 50px;*/
+}
+
+.parent {
+	background-color: pink;
+	width: 100%; /* Refer to parent container's width */
+	position: relative;
+}
+
+p {
+	position: static;  /*Default*/ 
+	/*margin-left: 50px;*/
+	/*margin-top: -20px;*/
+}
+
+input[name="Submit"] {
+	margin-left: 20px;
+}
+
+strong {
+	background-color: yellow;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+h1 {
+	background-color: grey;
+	padding: 10px;
+	position: fixed;
+	z-index: 1; /* Will push element on top */
+	width: inherit;
+}
+
+main.wrapper > p {
+	height: 1000px;
+	background-color: #efefef;
+	position: relative;
+	top: 70px;
+}
+
+/*
+ *
+ * Page 3 CSS Rules
+ *
+ */
+
+ /*div {
+ 	width: 100px;
+ 	height: 100px;
+ 	border: 1px solid #000;
+ 	position: absolute;
+ }*/
+
+ .blue{
+ 	background-color: blue;
+ 	top: 20px;
+ 	left: 20px;
+ 	z-index: 2;
+ }
+
+ .yellow {
+ 	background-color: yellow;
+ 	top: 40px;
+ 	left: 40px;
+ 	z-index: 0;
+ }
+
+ .orange {
+ 	background-color: orange;
+ 	top: 60px;
+ 	left: 60px;
+ 	z-index: 1;
+ }
+
+ /*
+  *
+  * Page 4 CSS Rules
+  *
+  */
+
+/*main.wrapper div {
+	padding: 0;
+  	margin: 0;
+}*/
+
+.menu {
+  	height: 100px;
+  	background-color: #30185d; /* blue */
+  	font-family: 'VT323', monospace;
+  	font-size: 5em;
+  	text-align: center;
+  	color: #d49549;
+  	line-height: 100px;
+}
+
+.sidebar {
+  	height: 775px;
+  	width: 20%;
+  	background-color: #76153b; /* red */
+  	background: url("../img/bg2.jpg");
+  	background-size: cover;
+  	float: left; /* possible value: right, none, left*/
+  	font-family: 'Cabin', sans-serif;
+  	text-align: center;
+  	font-size: 1.6em;
+  	color: #d49549;
+}
+
+ul {
+	list-style: none;
+	display: inline-block;
+}
+
+li {
+	width: 150px;
+	margin: 2em 0;
+	background-color: #9a2a55;
+	color: white;
+}
+
+a:link {
+	color: white;
+}
+
+.sideHead {
+	margin-bottom: 1em;
+	background-color:#76153b; 
+}
+
+/*
+ *
+ * content
+ *
+ */
+
+.content {
+  	/*height: 500px;*/
+  	background-color: #b27831; /* yellow */
+  	width: 80%;
+  	float: left;
+  	padding: 20px;
+  	font-family: 'Cabin', sans-serif;
+}
+
+.article-image {
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+div.content > p {
+	margin-bottom: 10px;
+}
+
+/*
+ *
+ * footer
+ *
+ */
+
+.footer {
+  	/*height: 200px;*/
+  	background-color: #30185d; /* light blue */
+  	clear: both; /* will offset floating effect */
+  	font-family: 'Cabin', sans-serif;
+  	/*text-align: center;*/
+}
+
+.copyright {
+	text-align: center;
+	font-family: 'VT323', monospace;
+	font-size: 1.5em;
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	background-color: #633b0b;
+	float: left;
+	margin-right: 25px;
+	border-radius: 50%;
+	background-image: url('../img/tech1.jpg');
+	background-size: cover;
+}
+
+.username {
+	margin-bottom: 15px;
+}
+
+h3.username + p {
+	overflow: hidden;
+
+}
+
+.page {
+	/*border: 1px solid red;*/
+	/*height: 502px;*/
+}
+
+/*
+ *
+ * Best-way to clear floats
+ *
+ */
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*
+ *
+ * columns
+ *
+ */
+
+.column {
+	background-color: #583b91;
+	height: 160px;
+	width: 31%;
+	margin: 20px 1.16%;
+	/*border: 1px solid red; /* for testing-only */
+	float: left;
+	padding: 15px;
+	position: relative;
+}
+
+/*
+ *
+ * managing text-overflow with multiline support
+ *
+ */
+
+ .block-with-text {
+ 	overflow: hidden;
+ 	position: relative;
+ 	line-height: 1.2em; /* em = default font-size, 16px */
+ 	max-height: 3.6em;
+ 	text-align: left;
+ 	margin-right: -1em;
+ 	padding-right: 30px;
+ }
+
+ .block-with-text:before {
+ 	content: "...";
+ 	position: absolute;
+ 	right: 40px;
+ 	bottom: 0;
+ }
+ .block-with-text:after {
+ 	content: "";
+ 	position: absolute;
+ 	right: 40px;
+ 	width: 1em;
+ 	height: 1em;
+ 	margin-top: 0.2em;
+ 	background-color: #b2d6ff;
+ }
+
+ .read-more {
+ 	position: absolute;
+ 	right: 25px;
+ 	bottom: 25px;
+ }

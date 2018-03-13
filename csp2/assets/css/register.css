@@ -1,0 +1,21 @@
+/* content */
+
+.region,
+.province,
+.city {
+    display: none;
+}
+
+small.form-text {
+    font-size: 0.65em;
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+    color: #663;
+}
+
+.regBtn:disabled {
+    background-color: gray;
+    border-color: gray;
+}

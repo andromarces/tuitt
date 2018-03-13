@@ -1,0 +1,32 @@
+/* general settings */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Audiowide', cursive;
+    color: #903;
+}
+
+h5 {
+    font-size: 1.11rem;
+    font-weight: 900;
+    color: #903;
+}
+
+.chkOutImg {
+    object-fit: cover;
+    height: 75px;
+    width: 75px;
+}
+
+.fa-times,
+.subTotal,
+.fa-smile,
+.fa-plane {
+    color: #663;
+}
+
+.grandTotal {
+    color: #036;
+    border: 1px solid #421c52;
+}

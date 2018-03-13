@@ -1,0 +1,134 @@
+/* universal selector */
+/*body * {
+ 	background-color: green;
+}*/
+
+/* type selector */
+/*p {
+	background-color: yellow;
+}*/
+
+/* ID selector */
+/*#para1 {
+	background-color: red;
+}*/
+
+/* class selector */
+/*.paragraphs {
+	background-color: orange;
+}*/
+
+/* attribute selector */
+/*a[target] {
+	color: green;
+}*/
+
+/* attribute (with value) selector */
+/*a[target="_top"] {
+	color: indigo;
+}*/
+
+/* adjacent sibling */
+/*h5 + a {
+	background-color: red;
+}
+
+a + br + a,
+a + br + br + a {
+	background-color: green;
+}*/
+
+/* general sibling combinator */
+/*h5 ~ div a {
+	background-color: yellow;
+}*/
+
+/* child selector combinator */
+/*div > a {
+	background-color: blue;
+}*/
+
+/* descendant selector */
+/*div a {
+	background-color: yellow;
+}*/
+
+/* pseudo-class selector */
+/*a:link {
+	color: orange;
+	background-color: black;
+}
+
+a:visited {
+	color: yellow;
+	background-color: green;
+}*/
+
+a:focus {
+	background-color: black;
+	color: red;
+}
+
+a:hover {
+	background-color: blue;
+	color: orange;
+}
+
+a:active,
+h3:active,
+h5:active {
+	background-color: yellow;
+	color: black;
+}
+
+/* :first-child */
+/*li:first-child,
+li:last-child {
+	background-color: black;
+	color: yellow;
+}
+
+p:first-child,
+p:last-child {
+	background-color: black;
+	color: yellow;
+}*/
+
+/* even and odd */
+/*li:nth-child(odd),
+p:nth-child(odd) {
+	background-color: black;
+	color: orange;
+}*/
+
+/*h3,
+h5,
+p,
+li,
+a:link {
+	background-color: black;
+	color: white;
+}*/
+
+/*body #content .data img:hover
+body = 1
+#content = 100
+.data = 10
+img = 1
+:hover = 10
+=>122*/
+
+p {
+	background-color: black;
+	color: yellow;
+}
+
+.thirdPara {
+	background-color: blue;
+	color: red;
+}
+
+#lastChild {
+	background-color: green;
+	color: blue;
+}

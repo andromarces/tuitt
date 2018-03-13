@@ -1,0 +1,135 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+ * to clear floats
+ */
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header {
+	background-color: violet;
+	height: 150px;
+}
+
+header > div.logo {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+header > div.logo > h1 {
+	line-height: 150px;
+}
+
+header > nav {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+/* brandname */
+.logo {
+	font-size: 2em;
+	color: #fff;
+}
+.logo > h1 > span {
+	color: darkviolet;
+}
+
+/* navigation */
+nav > ul > li {
+	display: inline-block;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 150px;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	padding: 10px 30px;
+	background-color: #fff;
+	width: 100px;
+	margin-right: 20px;
+}
+
+div.wrapper {
+	background-color: lightgrey;
+}
+
+main {
+	background-color: #fff;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+main p {
+	margin-bottom: 20px;
+}
+
+/*
+ * back to top
+ */
+div.back {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+div.back > a {
+	color: white;
+	text-decoration: none;
+	background-color: red;
+	padding: 10px;
+}
+
+/*
+ * banner
+ */
+div.grandparent {
+	background-color: grey;
+	padding: 50px;
+	width: 50%;
+	margin: 0 auto 32px;
+	position: relative;
+	text-align: center;
+}
+
+div.parent {
+	background-color: white;
+	padding: 25px;
+}
+
+div.avatar {
+	background-color: orange;
+	height: 100px;
+	width: 100px;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+
+div.name {
+	margin: 20px auto;
+}
+
+div.certified {
+	background-color: blue;
+	color: #fff;
+	padding: 15px;
+	width: 50%;
+	text-align: center;
+	position: absolute;
+	bottom: -18px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+}

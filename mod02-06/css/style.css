@@ -1,0 +1,170 @@
+/*
+*
+* General Rules
+*
+*/
+
+/* css reset */
+* {
+	/* removes default paddings and margins */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* to avoid overflow */
+	font-family: 'Pacifico', cursive;
+}
+
+.wrapper {
+	width: 700px;
+	margin: 0 auto;
+	/*margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;*/
+	background-color: #798884;
+	background: url("../bg/bg.jpg");
+	background-size: auto 100%;
+}
+
+header {
+	background-color: #45425f;
+	height: 70px;
+	line-height: 70px;
+	color: white;
+	text-align: center;
+	/*font-size: 10px;*/
+	/*text-transform: uppercase;*/
+}
+
+footer {
+	background-color: #45425f;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+	color: white;
+	font-size: 14px;
+}
+
+form {
+	text-align: right;
+	padding: 10px 20px 20px; /* top = 10px, right = 20px, bottom = 20px, left = 20px */
+}
+
+main {
+	padding: 20px 10px 10px;
+}
+
+h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+/*
+*
+* Dashboard
+*
+*/
+
+#postCircle,
+#imageCircle {
+	height: 70px;
+	width: 70px;
+	background-color: red;
+	border-radius: 50%;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	float: left;
+}
+
+#postCircle {
+	background-color: #626d2f;
+}
+
+#imageCircle {
+	background-color: #99a17c;
+}
+
+.inline-blocked {
+	display: inline-block;
+	text-align: center;
+	margin-left: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.dashColumns {
+	width: 32%;
+	height: 100px;
+	display: inline-block;
+}
+
+/*
+*
+* Buttons
+*
+*/
+
+.btn {
+	border: none;
+	padding: 15px 30px; /* 15px = top, bottom; 30px = left, right */
+	font-size: 14px;
+	border-radius: 5px; /* removes edges */
+	color: white;
+}
+
+.btn-blue {
+	background-color: #214b3e;
+}
+
+.btn-green {
+	background-color: #3b5a51;
+}
+
+/*
+*
+* Images
+*
+*/
+
+.img-set-holder {
+	text-align: center;
+}
+
+.image-set {
+	height: 100px; /* defined to maintain aspect ratio of images */
+	/*width: 100px;*/
+	padding: 5px; /* targets all sides: top, right, bottom, left */
+	background-color: #fff;
+	border-radius: 3px;
+	margin: 0 5px;
+}
+
+/*
+*
+* Posts
+*
+*/
+
+#postTitle,
+#postContent {
+	width: 100%;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+#postTitle {
+	margin-bottom: 20px;
+	/*width: 100%;
+	border-radius: 3px;
+	padding: 10px;*/
+}
+
+#postContent {
+	height: 100px;
+	margin-bottom: 10px;
+/*	width: 100%;
+	border-radius: 3px;
+	padding: 10px;*/
+}
+

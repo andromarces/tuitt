@@ -1,0 +1,14 @@
+/* general settings */
+
+.carouImg {
+    object-fit: contain;
+    object-position: center;
+    min-width: 290px;
+    min-height: 290px;
+    max-height: 550px;
+}
+
+.carouTxt {
+    font-weight: 900;
+    text-shadow: 3px 0 15px black, 0 3px 15px black, -3px 0 15px black, 0 -3px 15px black, 3px 3px 15px black, -3px -3px 15px black, -3px 3px 15px black, 3px -3px 15px black;
+}

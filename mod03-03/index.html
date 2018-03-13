@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample jQuery</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+
+<body>
+
+    <h1 id="heading">Sample jQuery</h1>
+
+    <input type="text" id="input1">
+    <button id="changeHeading">Change Heading</button>
+    <br>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <br>
+    <button id="toggleBtn">Hide/Show</button>
+
+    <hr>
+
+    <img src="1.jpg" alt="doggo" style="height: 400px" id="img">
+    <br>
+    <button id="imgh">Height</button>
+    <button id="imgc">Change</button>
+
+    <hr>
+
+    <button id="bgchange">Change BG</button>
+    <br>
+
+    <button class="colors">red</button>
+    <button class="colors">blue</button>
+    <button class="colors">green</button>
+    <!-- background: linear-gradient(to right, #44a08d, #093637); orca -->
+    <!--  background: linear-gradient(to right, #0575e6, #021b79); very blue -->
+    <!--  background: linear-gradient(to right, #43c6ac, #f8ffae); honey dew -->
+    <script>
+        // document.getElementsByTagName :: $
+        // .css.display = "none" :: .hide()
+        // $("#heading").hide();
+
+        // document.getElementById("btn").onclick = function() {
+        //     alert("hello");
+        // }
+
+        // $("#btn").click(function () {
+        //     alert("hello")
+        // });
+
+        $("#changeHeading").click(function () {
+            $("#heading").append(" " + $("#input1").val());
+        })
+
+        $("#toggleBtn").click(function () {
+            $("#heading").toggle();
+        });
+
+        $("#hideBtn").click(function () {
+            $("#heading").hide();
+        });
+
+        $("#showBtn").click(function () {
+            $("#heading").show();
+        });
+
+        $("#imgh").click(function () {
+            if ($("#img").height() == 100) {
+                $("#img").height(400);
+            } else {
+                $("#img").height(100);
+            };
+        });
+
+        $("#imgc").click(function () {
+            if ($("#img").attr("src") == "1.jpg") {
+                $("#img").attr("src", "2.jpg");
+            } else {
+                $("#img").attr("src", "1.jpg");
+            };
+        });
+
+        var bg = 0;
+        $("#bgchange").click(function () {
+            if (bg == 0) {
+                $("body").css("background", "linear-gradient(to right, #0575e6, #021b79)");
+                bg++;
+            } else if (bg == 1) {
+                $("body").css("background", "linear-gradient(to right, #44a08d, #093637)");
+                bg++;
+            } else {
+                $("body").css("background", "linear-gradient(to right, #43c6ac, #f8ffae)");
+                bg = 0;
+            }
+        });
+
+        $(".colors").click(function () {
+            $("body").css("background", $(this).html());
+        }
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+/* general settings */
+
+.fa-filter {
+    color: #663;
+}
+
+.scale-img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
+.productCard,
+.productCard:link,
+.productCard:visited,
+.productCard:hover,
+.productCard:active,
+.productCard:focus {
+    text-decoration: none;
+    color: black;
+}
+
+h6,
+.prodTitle {
+    color: #903;
+}
+
+.pagitext {
+    color: #663;
+}
+
+.searchTerm,
+.clearMinp,
+.clearMaxp {
+    padding: 0 5px;
+    margin-bottom: 2px;
+}
+
+li.page-item.active {
+    pointer-events: none;
+}
+
+.card-img-top {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.prodTitle {
+    font-size: 1.18rem;
+    font-weight: 900;
+}
+
+.prodPrice {
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
+button.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+h3.popover-header {
+    color: #903;
+    text-align: center;
+    background: honeydew;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.99px) {
+    /* content */
+    .filter {
+        position: absolute;
+        z-index: 3;
+        background-color: white;
+        left: 3px;
+    }
+    .filterLabel {
+        font-weight: 900;
+        font-size: 1.1rem;
+    }
+    div.media {
+        border: 1px solid black;
+        overflow: hidden;
+        height: 100px;
+    }
+    h6,
+    .itemPrice {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    /* content */
+    div.media {
+        border: 1px solid black;
+        overflow: hidden;
+        height: 100px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    div.media {
+        height: 180px;
+    }
+    .scale-img {
+        height: 150px;
+        width: 150px;
+    }
+}

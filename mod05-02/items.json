@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Coffee",
+        "description": "Powerful coffee drink.",
+        "price": 3,
+        "img": "assets\/img\/coffee.jpeg",
+        "category": "Drinks"
+    },
+    {
+        "name": "Juice",
+        "description": "Natural fruit juice.",
+        "price": 2,
+        "img": "assets\/img\/juice.jpeg",
+        "category": "Drinks"
+    },
+    {
+        "name": "Donut",
+        "description": "A ring of goodness.",
+        "price": 4,
+        "img": "assets\/img\/donut.jpeg",
+        "category": "Food"
+    },
+    {
+        "name": "Cake",
+        "description": "A slice of heaven.",
+        "price": 5,
+        "img": "assets\/img\/cake.jpeg",
+        "category": "Food"
+    },
+    {
+        "name": "Water",
+        "description": "Good ol' H2O.",
+        "price": 1,
+        "img": "assets\/img\/water.jpeg",
+        "category": "Drinks"
+    },
+    {
+        "name": "Ice Cream",
+        "description": "Great for those hot days.",
+        "price": 6,
+        "img": "assets\/img\/icecream.jpeg",
+        "category": "Food"
+    }
+]

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic 8 Ball</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
+    <script src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: calc(16px + 0.5vw);
+            background: linear-gradient(to right, #43c6ac, #f8ffae);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            margin-top: 1vw;
+            text-shadow: 3px 0 15px white, 0 3px 15px white, -3px 0 15px white,
+            0 -3px 15px white, 3px 3px 15px white, -3px -3px 15px white,
+            -3px 3px 15px white, 3px -3px 15px white;
+        }
+
+        #body {
+            position: relative;
+            background-color: black;
+            border-radius: 50%;
+            width: 90vw;
+            max-width: 500px;
+            height: 90vw;
+            max-height: 500px;
+            margin: 0 auto;
+        }
+
+        div {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            max-width: 250px;
+            height: 50vw;
+            max-height: 250px;
+        }
+
+        button {
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            margin-left: 30vw;
+            margin-top: 1vw;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            text-align: center;
+            font-family: "Indie Flower", cursive;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 1vw;
+            text-shadow: 3px 0 15px black,
+            0 3px 15px black,
+            -3px 0 15px black,
+            0 -3px 15px black,
+            3px 3px 15px black,
+            -3px -3px 15px black,
+            -3px 3px 15px black,
+            3px -3px 15px black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>
+            <strong>Magic 8 Ball</strong>
+        </h1>
+
+        <section id="body">
+            <div>
+                <strong id="text" class=""></strong>
+            </div>
+
+        </section>
+
+        <button id="btn">
+            <strong>SHAKE</strong>
+        </button>
+    </main>
+
+    <footer>
+        &copy;2018 Andro Marces
+    </footer>
+
+    <script>
+        $.fn.extend({
+            animateCss: function (animationName, callback) {
+                var animationEnd =
+                    "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+                this.addClass("animated " + animationName).one(animationEnd, function () {
+                    $(this).removeClass("animated " + animationName);
+                    if (callback) {
+                        callback();
+                    }
+                });
+                return this;
+            }
+        });
+
+        var rand1 = 0;
+        var result1 = 0;
+        $("#btn").click(function () {
+            $("#body").animateCss("shake");
+            var ans = [
+                "No.",
+                "Maybe yes.",
+                "Nope.",
+                "Maybe no.",
+                "Someday.",
+                "Yeah.",
+                "Maybe.",
+                "Haha! No.",
+                "Oh yes!",
+                "Try asking again.",
+                "Yes.",
+                "Sure.",
+                "Hell yeah!"
+            ];
+            var bg = [
+                "linear-gradient(to right, #44a08d, #093637)",
+                "linear-gradient(to right, #0575e6, #021b79)",
+                "linear-gradient(to right, #43c6ac, #f8ffae)",
+                "linear-gradient(to right, #159957, #155799)",
+                "linear-gradient(to right, #000046, #1cb5e0)",
+                "linear-gradient(to right, #007991, #78ffd6)",
+                "linear-gradient(to right, #56ccf2, #2f80ed)",
+                "linear-gradient(to right, #f2994a, #f2c94c)",
+                "linear-gradient(to right, #eb5757, #000000)",
+                "linear-gradient(to right, #e44d26, #f16529)",
+                "linear-gradient(to right, #4ac29a, #bdfff3)",
+                "linear-gradient(to right, #b2fefa, #0ed2f7)",
+                "linear-gradient(to right, #30e8bf, #ff8235)",
+                "linear-gradient(to right, #d66d75, #e29587)"
+            ];
+            while (rand1 == result1) {
+                rand1 = ans[Math.floor(Math.random() * ans.length)];
+            }
+            result1 = rand1;
+            var rand2 = bg[Math.floor(Math.random() * bg.length)];
+            $("#text").html(rand1);
+            $("body").css("background", rand2);
+            $("#text").animateCss("fadeIn");
+        });
+    </script>
+
+</body>
+
+</html>

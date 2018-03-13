@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML markup exercise</title>
+	<style type="text/css">
+	fieldset {
+		width: 315px;
+	}
+</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Your Details:</legend>
+			<label for="Name">Name:</label>
+			<input type="text" name="Name" required>
+			<br>
+			<label for="Email">Email:</label>
+			<input type="email" name="Email" required>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Your Review:</legend>
+			<br>
+			<label for="media">How did you hear about us?</label>
+			<select name="media" required>
+				<option value="google" selected>Google</option>
+				<option value="facebook">Facebook</option>
+				<option value="twitter">Twitter</option>
+				<option value="instagram">Instagram</option>
+				<option value="ads">Ads</option>
+				<option value="blogs">Blogs</option>		
+			</select>
+			<br><br>
+			<label>Would you visit again?</label>
+			<br>
+			<label><input type="radio" name="answer" value="yes">Yes</label>
+			<label><input type="radio" name="answer" value="no">No</label>
+			<label><input type="radio" name="answer" value="maybe">Maybe</label>
+			<br><br>
+			<label>Comments:</label>
+			<br>
+			<textarea name="comments" cols="40" rows="6"></textarea>
+			<br><br>
+			<label><input type="checkbox" name="adsignup" value="yes">Sign me up for email updates</label>
+			<br>
+			<input type="submit" name="submit" id="submit" value="Submit review">
+		</fieldset>
+	</form>
+</body>
+</html>

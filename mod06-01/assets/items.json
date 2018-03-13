@@ -1,0 +1,37 @@
+{
+    "0": {
+        "name": "Razzmatazz\u00ae Smoothie",
+        "description": "Dazzling you with the power of berries.",
+        "price": 1,
+        "img": "assets\/images\/classic\/rs.png",
+        "category": "Classic"
+    },
+    "2": {
+        "name": "Orange Dream Machine\u00ae Smoothie",
+        "description": "Feed your dreams.",
+        "price": 1,
+        "img": "assets\/images\/creamy\/odms.png",
+        "category": "Creamy"
+    },
+    "3": {
+        "name": "Chocolate Moo\u2019d\u00ae Smoothie",
+        "description": "Because you\u2019re always in the mood.",
+        "price": "100",
+        "img": "assets\/images\/creamy\/cms.png",
+        "category": "Creamy"
+    },
+    "4": {
+        "name": "Strawberry Whirl\u2122 Smoothie",
+        "description": "Dizzying amounts of goodness.",
+        "price": 1,
+        "img": "assets\/images\/allfruit\/sws1.png",
+        "category": "All Fruit"
+    },
+    "5": {
+        "name": "Five Fruit Frenzy\u2122 Smoothie",
+        "description": "Hold on to your hats\u2026",
+        "price": 1,
+        "img": "assets\/images\/allfruit\/fffs.png",
+        "category": "All Fruit"
+    }
+}

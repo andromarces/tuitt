@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>DOM Activity 3</title>
+
+	<!-- imports google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!-- imports custom stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<!-- css prep course -->
+	<div class="wrapper">
+		<header>
+			<h1>Tuitt Coding Bootcamp</h1>
+		</header>	
+
+		<main>
+			<!-- dashboard -->
+			<section id="mainDashboard">
+				<div class="dashColumns">
+					<h3><i class="fa fa-home"></i>Dashboard</h3>					
+				</div>
+
+				<!-- posts -->
+				<div class="dashColumns">
+					<div id="postCircle">
+						<i class="fa fa-file-text-o fa-lg"></i>
+					</div>
+
+					<div class="inline-blocked">
+						<p>5</p>
+						<p>posts</p>
+					</div>
+				</div>
+
+				<!-- images -->
+				<div class="dashColumns">
+					<div id="imageCircle">
+						<i class="fa fa-picture-o fa-lg"></i>
+					</div>
+
+					<div class="inline-blocked">
+						<p>13</p>
+						<p>images</p>						
+					</div>
+				</div>
+			</section>
+
+			<!-- new post -->
+			<section>
+				<h3><i class="fa fa-plus-circle"></i>New Post</h3>
+
+				<form method="" action="">
+					<input id="postTitle" type="" name="" placeholder="Enter your post title">
+					<textarea id="postContent" placeholder="Enter your content here"></textarea>
+					<input type="submit" name="btnPublish" id="btnPublish" class="btn btn-blue" value="Publish">
+				</form>
+			</section>
+
+			<!-- upload image -->
+			<section>
+				<h3><i class="fa fa-cloud-upload"></i>Upload Image</h3>
+
+				<!-- images -->
+				<div class="img-set-holder">
+					<img class="image-set" src="http://lorempixel.com/200/200/" alt="">
+					<img class="image-set" src="http://lorempixel.com/200/200/" alt="">
+					<img class="image-set" src="http://lorempixel.com/200/200/" alt="">
+					<img class="image-set" src="http://lorempixel.com/200/200/" alt="">
+					<img class="image-set" src="http://lorempixel.com/200/200/" alt="">
+				</div>
+
+				<form method="" action="">
+					<button class="btn btn-green" type="button"><i class="fa fa-upload" aria-hidden="true"></i>Upload</button>
+					<button class="btn btn-blue" type="button"><i class="fa fa-file-image-o" aria-hidden="true"></i>Browse</button>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<span>Tuitt Coding Bootcamp &copy; 2017</span>
+		</footer>
+	</div>
+
+	<script src="https://use.fontawesome.com/9d1fffe6df.js"></script>
+
+</body>
+</html>

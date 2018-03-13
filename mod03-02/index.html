@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample JS Day 2</title>
+
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        #number {
+            width: 67px;
+        }
+
+        .span2 {
+            padding-right: 2px;
+        }
+
+        #btn2 {
+            margin-left: 54px;
+        }
+
+        input {
+            width: 94px;
+        }
+
+        #wUnit {
+            width: 96px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sample JS Day 2</h1>
+
+    <p>enter a number in the input box, and evaluate if the number is a multiple of 3 AND 5. if not, check if it's a multiple
+        of 3, OR a multiple of 5.</p>
+
+    <input type="number" id="number" required>
+
+    <br>
+
+    <button id="btn">Click Me!</button>
+
+    <hr>
+
+    <h2>BMI Computer</h2>
+    <span>Weight:</span>
+    <input type="number" name="weight" id="weight" step="any" min="0" required>
+    <select id="wUnit">
+        <option value="1">Kilograms</option>
+        <option value="2">Pounds</option>
+    </select>
+    <br>
+    <span class="span2">Height:</span>
+    <input type="number" name="height" id="height" step="any" min="0" required>
+    <select id="hUnit">
+        <option value="1">Meters</option>
+        <option value="2">Centimeters</option>
+        <option value="3">Inches</option>
+        <option value="4">Feet</option>
+    </select>
+    <br>
+    <button id="btn2">Compute BMI</button>
+
+    <hr>
+
+    <div id="asterisk"></div>
+
+    <button id="more">More</button>
+    <button id="less">Less</button>
+
+    <script type="text/javascript">
+        document.getElementById('btn').onclick = function () {
+
+            var num = document.getElementById("number").value;
+
+            if (num == 0) {
+                alert(num + " is zero");
+                console.log(num + " is zero");
+            } else if (num % 3 == 0 && num % 5 == 0 && num % 2 == 0) {
+                alert(num + " is a multiple of 3 AND 5 AND is an even number");
+                console.log(num + " is a multiple of 3 AND 5 AND is an even number");
+            } else if (num % 3 == 0 && num % 5 == 0) {
+                alert(num + " is a multiple of 3 AND 5 AND is an odd number");
+                console.log(num + " is a multiple of 3 AND 5 AND is an odd number");
+            } else if (num % 3 == 0 && num % 2 == 0) {
+                alert(num + " is a multiple of 3, but not of 5 and is an even number");
+                console.log(num + " is a multiple of 3, but not of 5 and is an even number");
+            } else if (num % 3 == 0) {
+                alert(num + " is a multiple of 3, but not of 5 and is an odd number");
+                console.log(num + " is a multiple of 3, but not of 5 and is an odd number");
+            } else if (num % 5 == 0 && num % 2 == 0) {
+                alert(num + " is a multiple of 5, but not of 3 and is an even number");
+                console.log(num + " is a multiple of 5, but not of 3 and is an even number");
+            } else if (num % 5 == 0) {
+                alert(num + " is a multiple of 5, but not of 3 and is an odd number");
+                console.log(num + " is a multiple of 5, but not of 3 and is an odd number");
+            } else if (num % 2 == 0) {
+                alert(num + " is not a multiple of 3 or 5, but is an even number");
+                console.log(num + " is not a multiple of 3 or 5, but is an even number");
+            } else {
+                alert(num + " is not a multiple of 3 or 5, but is an odd number");
+                console.log(num + " is not a multiple of 3 or 5, but is an odd number");
+            }
+        }
+
+        var weight2 = 1;
+        document.getElementById('wUnit').onchange = function () {
+            var weight = document.getElementById("weight").value;
+            var wunit = document.getElementById("wUnit").value;
+            var weight1 = [
+                1,
+                2.20462
+            ];
+            document.getElementById("weight").value = ((weight * weight2) * weight1[wunit - 1]);
+            weight2 = ((weight / weight) / weight1[wunit - 1]);
+        }
+
+        var height2 = 1;
+        document.getElementById('hUnit').onchange = function () {
+            var height = document.getElementById("height").value;
+            var hunit = document.getElementById("hUnit").value;
+            var height1 = [
+                1,
+                100,
+                39.3701,
+                3.28084
+            ];
+            document.getElementById("height").value = ((height * height2) * height1[hunit - 1]);
+            height2 = (1 / height1[hunit - 1]);
+        }
+
+        document.getElementById('btn2').onclick = function () {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+            var hunit = document.getElementById("hUnit").value;
+            switch (hunit) {
+                case "1":
+                    hmulti = 1;
+                    break;
+                case "2":
+                    hmulti = 0.01;
+                    break;
+                case "3":
+                    hmulti = 0.0254;
+                    break;
+                case "4":
+                    hmulti = 0.3048;
+                    break;
+            }
+            var wunit = document.getElementById("wUnit").value;
+            switch (wunit) {
+                case "1":
+                    wmulti = 1;
+                    break;
+                case "2":
+                    wmulti = 0.453592;
+                    break;
+            }
+            var bmi = (weight * wmulti) / ((height * hmulti) * (height * hmulti));
+            bmi = +bmi.toFixed(4);
+
+            if (bmi < 18.5) {
+                alert("BMI is " + bmi + ". You are underweight.");
+                console.log("BMI is " + bmi + ". You are underweight.");
+            } else if (bmi > 18.4 && bmi < 25) {
+                alert("BMI is " + bmi + ". You have a normal weight.");
+                console.log("BMI is " + bmi + ". You have a normal weight.");
+            } else if (bmi > 24.9 && bmi < 30) {
+                alert("BMI is " + bmi + ". You are overweight.");
+                console.log("BMI is " + bmi + ". You are overweight.");
+            } else {
+                alert("BMI is " + bmi + ". You are obese.");
+                console.log("BMI is " + bmi + ". You are obese.");
+            }
+        }
+
+        // var x = 0;
+        // while(x <= 20) {
+        //     if (x == 0) {
+        //         console.log(x + " is zero");
+        //     } else if (x % 3 == 0 && x % 5 == 0 && x % 2 == 0) {
+        //         console.log(x + " is a multiple of 3 AND 5 AND is an even number");
+        //     } else if (x % 3 == 0 && x % 5 == 0) {
+        //         console.log(x + " is a multiple of 3 AND 5 AND is an odd number");
+        //     } else if (x % 3 == 0 && x % 2 == 0) {
+        //         console.log(x + " is a multiple of 3, but not of 5 and is an even number");
+        //     } else if (x % 3 == 0) {
+        //         console.log(x + " is a multiple of 3, but not of 5 and is an odd number");
+        //     } else if (x % 5 == 0 && x % 2 == 0) {
+        //         console.log(x + " is a multiple of 5, but not of 3 and is an even number");
+        //     } else if (x % 5 == 0) {
+        //         console.log(x + " is a multiple of 5, but not of 3 and is an odd number");
+        //     } else if (x % 2 == 0) {
+        //         console.log(x + " is not a multiple of 3 or 5, but is an even number");
+        //     } else {
+        //         console.log(x + " is not a multiple of 3 or 5, but is an odd number");
+        //     }
+        //     x++;
+        // }
+
+        // var sumOdd = 0;
+        // var sumEven = 0;
+        // var x = 0;
+        // var y = 1;
+        // while (x <= 50) {
+        //     console.log(sumEven + " plus " + x + " = " + (sumEven += x));
+        //     if (y <= 49) {
+        //         console.log(sumOdd + " plus " + y + " = " + (sumOdd += y))
+        //     };
+        //     x += 2;
+        //     y += 2;
+        // }
+        // alert("Sum of odd is " + sumOdd + "\nSum of even is " + sumEven);
+
+        // var colors = [
+        //     "Red",
+        //     "Orange",
+        //     "Yellow",
+        //     "Green",
+        //     "Violet",
+        //     "Indigo",
+        //     "Blue"
+        // ];
+
+        // console.log(colors[0] + ", " + colors[1] + ", " + colors[2] + ", " + colors[3] + ", " + colors[4] + ", " + colors[5] + ", " + colors[6])
+
+        // var x = colors.length - 1
+        // while (x >= 0) {
+        //     console.log(colors[x]);
+        //     x--;
+        // }
+
+        // for (var x = colors.length - 1; x >= 0; x--) {
+        //     console.log(colors[x]);
+        // }
+
+        var boxsize = 5;
+        for (var x = boxsize; x >= 0; x--) {
+            for (var y = boxsize; y >= 0; y--) {
+                document.getElementById("asterisk").innerHTML += " * ";
+            }
+            document.getElementById("asterisk").innerHTML += "<br>";
+        }
+
+        document.getElementById("more").onclick = function () {
+            boxsize = boxsize + 1;
+            document.getElementById("asterisk").innerHTML = "";
+            for (var x = boxsize; x >= 0; x--) {
+                for (var y = boxsize; y >= 0; y--) {
+                    document.getElementById("asterisk").innerHTML += " * ";
+                }
+                document.getElementById("asterisk").innerHTML += "<br>";
+            }
+        }
+
+        document.getElementById("less").onclick = function () {
+            if (boxsize > 1) {
+                boxsize--;
+                document.getElementById("asterisk").innerHTML = "";
+                for (var x = boxsize; x >= 0; x--) {
+                    for (var y = boxsize; y >= 0; y--) {
+                        document.getElementById("asterisk").innerHTML += " * ";
+                    }
+                    document.getElementById("asterisk").innerHTML += "<br>";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

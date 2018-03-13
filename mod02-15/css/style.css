@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+header,
+#home,
+#about,
+#services,
+#gallery,
+#projects {
+	position: relative;
+}
+
+#home {
+	background-color: skyblue;
+}
+
+#about {
+	background-color: orangered;
+}
+
+#services {
+	background-color: blue;
+}
+
+#projects {
+	background-color: red;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	position: relative;
+	background-color: skyblue;
+	flex: 1;
+	margin: 1% 0;
+	text-decoration: none;
+	color: blue;
+}
+
+li {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* 
+ * mobile devices
+ */
+@media only screen and (max-width: 426px) {
+
+	header {
+		height: 380px;
+	}
+
+	.headerBox,
+	.homeBox,
+	.homeTxt,
+	.aboutBox,
+	.serviceBox,
+	.projectBox,
+	.galleryBox {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+
+	.headerBox {
+		display: flex;
+		flex-flow: column;
+		height: 90%;
+		width: 90%;
+	}
+
+	.logo {
+		background-color: gray;
+		width: 33.33%;
+		padding-bottom: 33.33%;
+		margin: 0 auto 5%;
+	}
+
+	ul {
+		font-size: 3.83vw;
+		display: flex;
+		flex-flow: column;
+		flex: 1;
+	}
+
+	#home,
+	#about,
+	#services,
+	#projects {
+		height: 568px;
+	}
+
+	.homeBox {
+		width: 60%;
+		padding-bottom: 60%;
+		border: 5px solid white;
+	}
+
+	.homeTxt {
+		font-size: 3.83vw;
+		text-align: center;
+		width: 80%;
+	}
+
+	span h1 {
+		margin-bottom: 10%;
+	}
+
+	#about  {
+		height: 568px;
+	}
+
+	.headerBox,
+	.aboutBox,
+	.serviceBox,
+	.projectBox {
+		height: 90%;
+		width: 90%;
+		font-size: 3.83vw;
+	}
+
+	div.aboutBox p {
+		margin: 2.5% 0;
+	}
+
+	div.serviceBox h2 {
+		margin-bottom: 5%;
+	}
+
+	.service {
+		width: 100%;
+		height: auto;
+		border: 1px solid black;
+		overflow: hidden;
+	}
+
+	.serviceThumb {
+		position: relative;
+		width: 17%;
+		padding-bottom: 17%;
+		border: 1px solid black;
+		float: left;
+	}
+
+	.projectTxt,
+	.serviceTxt {
+		position: absolute;
+	}
+
+	.serviceTxt2 {
+		width: 83%;
+		float: right;
+	}
+
+	.service p {
+		margin: 3.8% 0;
+	}
+
+	.projectBox p {
+		margin: 4% 0 0;
+	}
+
+	.projectTxt {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	#gallery {
+		height: 1704px;
+	}
+
+	.galleryBox {
+		height: 95%;
+		width: 90%;
+		font-size: 3.83vw;
+	}
+
+}

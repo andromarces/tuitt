@@ -1,0 +1,251 @@
+/*
+ * global settings
+ */
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-size: calc(16px + 0.5vw);
+}
+
+html,
+body {
+	background-color: #f5f5dc;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+
+/*
+ * nav
+ */
+
+nav,
+nav div a {
+	color: #f4f0cb;
+	background-color: #685642;
+}
+
+nav div a:focus,
+nav div a:hover {
+	color: #ded29e;
+}
+
+.nav-pills .nav-link.active {
+	background-color: #b7c68b;
+	color: #685642;
+}
+
+.navbar,
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+}
+
+.navbar-brand span {
+	font-family: 'Pacifico', cursive;
+	color: #f4f0cb;
+	margin-left: -9px;
+}
+
+#brand {
+	object-fit: cover;
+	height: 47px;
+}
+
+/*
+ * sidebar menu
+ */
+
+.list-group-item {
+	background-color: #685642;
+	box-shadow: 8px 8px 15px #000;
+}
+
+.list-group-item.active {
+	color: #685642;
+	background-color: #b7c68b;
+	border-color: #b7c68b;
+}
+
+.list-group-item:first-child {
+	border-top-left-radius: 3rem;
+	border-top-right-radius: 3rem;
+}
+
+.list-group-item:last-child {
+	border-bottom-left-radius: 3rem;
+	border-bottom-right-radius: 3rem;
+}
+
+/*
+ * sidebar buttons
+ */
+
+#topBtn {
+	display: none;
+	bottom: 14%;
+	top: auto;
+}
+
+.sidebar-btn,
+.sidebar-btn:not([disabled]):not(.disabled):active {
+	right: 1%;
+	background: url(../img/1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: #f4f0cb;
+	border-radius: 50%;
+}
+
+.sidebar-btn,
+.sidebar-btn:focus {
+	background-color: #f4f0cb;
+	box-shadow: 8px 8px 15px #000;
+}
+
+.sidebar-btn:not([disabled]):not(.disabled):active {
+	background-color: #f4f0cb;
+	margin: 6px 0 0;
+	box-shadow: 3px 8px 15px #000;
+}
+
+#topBtn:not([disabled]):not(.disabled):active {
+	margin: 0 0 -6px;
+}
+
+/*
+ * off canvas
+ */
+
+.sidebar-offcanvas,
+.sidebar-btn {
+	z-index: 10;
+	position: fixed;
+	top: 3%;
+	transition: all .25s ease-out;
+}
+
+.sidebar-offcanvas {
+	left: -55%;
+}
+
+.sidebar-offcanvas.active {
+	left: 1%;
+}
+
+/*
+ * header
+ */
+
+.jumbotron {
+	background-color: white;
+	font-family: 'Pacifico', cursive;
+	border: 3px solid black;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.jumbotron img {
+	width: 100%;
+}
+
+/*
+ * main
+ */
+
+form {
+	background-color: white;
+}
+
+form button.btn-primary {
+	color: #21b6a8;
+	background-color: #b67721;
+	border-color: #b67721;
+}
+
+form button.btn-primary:not([disabled]):not(.disabled):active,
+form button.btn-primary:focus,
+form button.btn-primary:link,
+form button.btn-primary:visited,
+form button.btn-primary:hover {
+	color: #f4f0cb;
+	background-color: #b67721;
+	border-color: #b67721;
+	box-shadow: 0 0 0 4px #b6212d;
+}
+
+#map {
+	padding-bottom: 100%;
+	width: 100%;
+	border-radius: .25rem;
+}
+
+.card-body {
+	flex: 0 1 auto;
+}
+
+ul li a.nav-link {
+	padding-top: 0;
+}
+
+.fa-facebook-square {
+	color: rgb(59, 89, 152);
+}
+
+.fa-twitter-square {
+	color: rgb(0, 172, 237);
+}
+
+.fa-instagram {
+	color: white;
+	background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+	border-radius: 5px;
+	padding: 0 2px;
+}
+
+.fa-youtube {
+	color: red;
+}
+
+.alert {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	bottom: 10px;
+	left: 37%;
+	transform: translateX(-47%);
+}
+
+/*
+ * footer
+ */
+
+footer {
+	background-color: #685642;
+	color: #f4f0cb;
+}
+
+/*
+ *
+ * madium devices and up (tablets and up, 768px and up)
+ *
+ */
+
+@media only screen and (min-width: 768px) {
+	/*
+ 	 * header
+ 	 */
+	.jumbotron {
+		border-radius: 15px;
+		margin-bottom: .25rem;
+	}
+}

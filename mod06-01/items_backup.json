@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Razzmatazz\u00ae Smoothie",
+        "description": "Dazzling you with the power of berries.",
+        "price": 1,
+        "img": "assets\/images\/classic\/rs.png",
+        "category": "Classic"
+    },
+    {
+        "name": "Strawberry Surf Rider\u2122 Smoothie",
+        "description": "Hang ten and all that.",
+        "price": 1,
+        "img": "assets\/images\/classic\/ssrs.png",
+        "category": "Classic"
+    },
+    {
+        "name": "Orange Dream Machine\u00ae Smoothie",
+        "description": "Feed your dreams.",
+        "price": 1,
+        "img": "assets\/images\/creamy\/odms.png",
+        "category": "Creamy"
+    },
+    {
+        "name": "Chocolate Moo\u2019d\u00ae Smoothie",
+        "description": "Because you\u2019re always in the mood.",
+        "price": "100",
+        "img": "assets\/images\/creamy\/cms.png",
+        "category": "Creamy"
+    },
+    {
+        "name": "Strawberry Whirl\u2122 Smoothie",
+        "description": "Dizzying amounts of goodness.",
+        "price": 1,
+        "img": "assets\/images\/allfruit\/sws1.png",
+        "category": "All Fruit"
+    },
+    {
+        "name": "Five Fruit Frenzy\u2122 Smoothie",
+        "description": "Hold on to your hats\u2026",
+        "price": 1,
+        "img": "assets\/images\/allfruit\/fffs.png",
+        "category": "All Fruit"
+    }
+]

@@ -1,0 +1,57 @@
+/* general settings */
+
+.carouImg {
+    object-fit: contain;
+    object-position: center;
+    min-width: 290px;
+    min-height: 290px;
+    max-height: 290px;
+}
+
+.carouTxt {
+    font-weight: 900;
+    text-shadow: 3px 0 15px black, 0 3px 15px black, -3px 0 15px black, 0 -3px 15px black, 3px 3px 15px black, -3px -3px 15px black, -3px 3px 15px black, 3px -3px 15px black;
+}
+
+a.navbar-brand {
+    display: none;
+}
+
+#brand,
+.frontCaption {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.frontCaption {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    text-shadow: 3px 0 15px white, 0 3px 15px white, -3px 0 15px white, 0 -3px 15px white, 3px 3px 15px white, -3px -3px 15px white, -3px 3px 15px white, 3px -3px 15px white;
+    font-family: 'Audiowide', cursive;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .carouImg {
+        max-height: 340px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .carouImg {
+        max-height: 460px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .carouImg {
+        max-height: 550px;
+    }
+}

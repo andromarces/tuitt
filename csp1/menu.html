@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="description" content="Pastries! Coffee! Desserts! Don't forget, you can enjoy these with our playful cats!">
+	<meta name="keywords" content="cat,pastries,café,coffee,latte,catpuccino,purrfect,desserts">
+  	<meta name="author" content="Andro Marces">
+
+	<title>Purrfect Café - Menu</title>
+
+	<!-- import bootstrap 4 css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	    crossorigin="anonymous">
+
+	<!-- use fontawesome 5 icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+	<!-- use google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+
+	<!-- import custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+
+	<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+	<link rel="apple-touch-icon" href="img/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="img/favicon-144.png">
+	<meta name="msapplication-config" content="img/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+</head>
+
+<body>
+
+	<!-- navbar / sidebar -->
+	<nav class="nav">
+
+		<!-- navbar -->
+		<div class="d-none d-sm-flex nav-pills">
+			<a class="nav-link" href="index.html">Home</a>
+			<a class="nav-link active font-weight-bold" href="#top">Menu</a>
+			<a class="nav-link" href="cats.html">Cats</a>
+			<a class="nav-link" href="contact.html">Contact Us</a>
+		</div>
+		<!-- /.nav-pills -->
+
+		<!-- navbar brand -->
+		<div class="navbar ml-auto d-none d-sm-flex">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/8.png" id="brand" alt="Purrfect Café">
+				<span>Purrfect Café</span>
+			</a>
+		</div>
+		<!-- /.navbar -->
+
+		<!-- offcanvas sidebar / sidebar button -->
+		<div class="d-sm-none" id="sidebar">
+			<button type="button" class="btn sidebar-btn" data-toggle="offcanvas">
+				<i class="fa fa-bars" data-fa-transform="shrink-4 down-6"></i>
+			</button>
+
+			<div class="col-6 px-0 sidebar-offcanvas">
+				<div class="list-group text-center">
+					<a href="index.html" class="list-group-item">Home</a>
+					<a href="#top" class="list-group-item active font-weight-bold">Menu</a>
+					<a href="cats.html" class="list-group-item">Cats</a>
+					<a href="contact.html" class="list-group-item">Contact Us</a>
+				</div>
+				<!-- /.list-group -->
+			</div>
+			<!-- /.sidebar-offcanvas -->
+		</div>
+		<!-- /#sidebar -->
+
+		<!-- back to top button -->
+		<button type="button" class="btn sidebar-btn d-lg-none" id="topBtn" data-toggle="top">
+			<i class="fa fa-arrow-up" data-fa-transform="shrink-4 down-6"></i>
+		</button>
+
+	</nav>
+	<!-- /.nav -->
+
+	<!-- header -->
+	<header class="jumbotron text-center py-2 col-sm-10 mx-auto">
+		<img class="d-sm-none" src="img/7.png" alt="Purrfect Café">
+		<h1>●Menu●</h1>
+	</header>
+	<!-- /.jumbotron -->
+
+	<!-- main -->
+	<main>
+
+		<!-- navtabs -->
+		<section>
+
+			<!-- tabs -->
+			<ul class="nav nav-tabs nav-justified d-sm-none" id="menuTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link" id="pastries-tab" data-toggle="tab" href="#pastries" role="tab" aria-controls="pastries" aria-selected="false">Pastries</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="coffee-tab" data-toggle="tab" href="#coffee" role="tab" aria-controls="coffee" aria-selected="false">Coffee</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Desserts</a>
+				</li>
+			</ul>
+			<!-- /#menuTab -->
+
+			<!-- tab content -->
+			<div class="tab-content d-sm-none" id="menuTabContent">
+				<div class="tab-pane fade" id="pastries" role="tabpanel" aria-labelledby="pastries-tab">
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/11.jpg" alt="Sugar Doughnut">
+						<div class="card-body">
+							<h4 class="card-title">Sugar Doughnut</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 50.00</h6>
+							<p class="card-text">For a delightful change of pace, we roll the classic yeast-raised doughnut in crunchy, granulated sugar. Sweet!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/10.jpg" alt="Tuna Sandwich Cake">
+						<div class="card-body">
+							<h4 class="card-title">Tuna Sandwich Cake</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text">Enter the tuna sandwich cake. The “cake” layers are made up of various breads, with fillings of vegetables, tuna and
+								savory cream cheese “icing” between each layer.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /#pastries -->
+				<div class="tab-pane fade" id="coffee" role="tabpanel" aria-labelledby="coffee-tab">
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/6.jpg" alt="Catpuccino">
+						<div class="card-body">
+							<h4 class="card-title">Catpuccino</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text">The cafe's bestseller! Prepared with 1/3 part espresso, 1/3 part steamed milk and 1/3 part foam in a small catpuccino
+								cup which are typically 4-6 oz. in capacity. Catpuccino can be garnished with a light sprinkle of ground chocolate,
+								cocoa powder, cinnamon, or nutmeg.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/9.jpg" alt="Latte">
+						<div class="card-body">
+							<h4 class="card-title">Latte</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00 for two!</h6>
+							<p class="card-text">Our latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso,
+								two-thirds heated milk and about 1cm of foam. With our skilled baristas, the foam can be poured in such a way to
+								create pictures of your favorite cats. Now buy one - take one! Purrfect!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /#coffee -->
+				<div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/12.jpg" alt="Parfait">
+						<div class="card-body">
+							<h4 class="card-title">Parfait</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text"> Our parfait is made by layering parfait cream, ice cream, and flavored gelatins in a tall, clear glass. The cat shaped
+								toppings are created with whipped cream, marshmallows, and fresh strawberries.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+					<div class="card text-center rounded-0">
+						<img class="card-img-top rounded-0" src="img/13.jpg" alt="Cat Cookies">
+						<div class="card-body">
+							<h4 class="card-title">Cat Cookies</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 20.00</h6>
+							<p class="card-text">Our little cat cookies are made with sweet dough, baked in single-sized servings and can be eaten out-of-hand. Cute!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /#desserts -->
+			</div>
+			<!-- /#menuTabContent -->
+		</section>
+
+		<!-- cards -->
+		<section>
+			<div class="card d-none d-sm-flex col-sm-10 text-center pastries mx-auto px-0">
+				<h4 class="card-header font-weight-bold">Pastries</h4>
+			</div>
+			<!-- /.pastries -->
+			<div class="row mx-0 justify-content-center">
+				<div class="card text-center col-sm-10 d-none d-sm-flex rounded-0 pastries">
+					<div class="row justify-content-center">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/11.jpg" alt="Sugar Doughnut">
+						<div class="card-body col-sm-7 align-self-center">
+							<h4 class="card-title">Sugar Doughnut</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 50.00</h6>
+							<p class="card-text">For a delightful change of pace, we roll the classic yeast-raised doughnut in crunchy, granulated sugar. Sweet!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+				<div class="card text-center col-sm-10 d-none d-sm-flex mb-1 pastries">
+					<div class="row justify-content-center">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/10.jpg" alt="Tuna Sandwich Cake">
+						<div class="card-body col-sm-7">
+							<h4 class="card-title">Tuna Sandwich Cake</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text">Enter the tuna sandwich cake. The “cake” layers are made up of various breads, with fillings of vegetables, tuna and
+								savory cream cheese “icing” between each layer.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.row -->
+			<div class="card d-none d-sm-flex col-sm-10 text-center mx-auto coffee px-0">
+				<h4 class="card-header font-weight-bold">Coffee</h4>
+			</div>
+			<!-- /.coffee -->
+			<div class="row mx-0 justify-content-center">
+				<div class="card text-center col-sm-10 d-none d-sm-flex rounded-0 coffee">
+					<div class="row justify-content-center" id="coffee1">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/6.jpg" alt="Catpuccino">
+						<div class="card-body col-sm-7">
+							<h4 class="card-title">Catpuccino</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text">The cafe's bestseller! Prepared with 1/3 part espresso, 1/3 part steamed milk and 1/3 part foam in a small catpuccino
+								cup which are typically 4-6 oz. in capacity. Catpuccino can be garnished with a light sprinkle of ground chocolate,
+								cocoa powder, cinnamon, or nutmeg.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+				<div class="card text-center col-sm-10 d-none d-sm-flex mb-1 coffee">
+					<div class="row justify-content-center" id="coffee2">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/9.jpg" alt="Latte">
+						<div class="card-body col-sm-7">
+							<h4 class="card-title">Latte</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00 for two!</h6>
+							<p class="card-text">Our latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso,
+								two-thirds heated milk and about 1cm of foam. With our skilled baristas, the foam can be poured in such a way to
+								create pictures of your favorite cats. Now buy one - take one! Purrfect!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.row -->
+			<div class="card d-none d-sm-flex col-sm-10 text-center mx-auto desserts px-0">
+				<h4 class="card-header font-weight-bold">Desserts</h4>
+			</div>
+			<!-- /.desserts -->
+			<div class="row mx-0 justify-content-center">
+				<div class="card text-center col-sm-10 d-none d-sm-flex rounded-0 desserts">
+					<div class="row justify-content-center">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/12.jpg" alt="Parfait">
+						<div class="card-body col-sm-7">
+							<h4 class="card-title">Parfait</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 100.00</h6>
+							<p class="card-text"> Our parfait is made by layering parfait cream, ice cream, and flavored gelatins in a tall, clear glass. The cat shaped
+								toppings are created with whipped cream, marshmallows, and fresh strawberries.</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+				<div class="card text-center col-sm-10 d-none d-sm-flex mb-1 desserts">
+					<div class="row justify-content-center">
+						<img class="card-img-top col-sm-5 col-md-5 col-lg-4 col-xl-3 align-self-center" src="img/13.jpg" alt="Cat Cookies">
+						<div class="card-body col-sm-7">
+							<h4 class="card-title">Cat Cookies</h4>
+							<h6 class="card-subtitle mb-2 font-weight-bold">Php 20.00</h6>
+							<p class="card-text">Our little cat cookies are made with sweet dough, baked in single-sized servings and can be eaten out-of-hand. Cute!</p>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.row -->
+		</section>
+
+	</main>
+
+	<!-- footer -->
+	<footer>
+		<p class="mb-0 text-center">&copy; 2017 Andro Marces</p>
+	</footer>
+
+	<!-- imports jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	    crossorigin="anonymous"></script>
+
+	<!-- imports popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	    crossorigin="anonymous"></script>
+
+	<!-- imports Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	    crossorigin="anonymous"></script>
+
+	<!-- imports script.js -->
+	<script src="js/menu-script.js"></script>
+
+</body>
+
+</html>

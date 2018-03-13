@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sample for JS</title>
+	<style type="text/css">
+		.keypad {
+			width: 70px;
+			height: 70px;
+			margin: 2px auto;
+			font-size: 1.5em;
+		}
+
+		button.oe {
+			width: 143px;
+		}
+
+		button.backspace {
+			width: 217px;
+		}
+
+		#heading {
+			width: 290px;
+			text-align: right;
+			border: 1px solid black;
+			height: 28px;
+		}
+
+		#select {
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>JS Calculator</h1>
+
+	<select id="select" onchange="showMonth(this.value)">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+	</select>
+	<h2 id="month"></h2>
+	<br>
+
+	<h2 id="heading"></h2>
+	<!-- <h2 id="content">JS can change HTML content</h2> -->
+
+	<!-- <button onclick="alert('hello world')">Click Me!</button> -->
+
+	<button onclick="display(this.innerHTML)" class="keypad">7</button>
+	<button onclick="display(this.innerHTML)" class="keypad">8</button>
+	<button onclick="display(this.innerHTML)" class="keypad">9</button>
+	<button onclick="display(this.innerHTML)" class="keypad">/</button>
+	<br>
+	<button onclick="display(this.innerHTML)" class="keypad">4</button>
+	<button onclick="display(this.innerHTML)" class="keypad">5</button>
+	<button onclick="display(this.innerHTML)" class="keypad">6</button>
+	<button onclick="display(this.innerHTML)" class="keypad">*</button>
+	<br>
+	<button onclick="display(this.innerHTML)" class="keypad">1</button>
+	<button onclick="display(this.innerHTML)" class="keypad">2</button>
+	<button onclick="display(this.innerHTML)" class="keypad">3</button>
+	<button onclick="display(this.innerHTML)" class="keypad">-</button>
+	<br>
+	<button onclick="display(this.innerHTML)" class="keypad">0</button>
+	<button onclick="display(this.innerHTML)" class="keypad">.</button>
+	<button onclick="compute()" class="keypad">=</button>
+	<button onclick="display(this.innerHTML)" class="keypad">+</button>
+	<br>
+	<button onclick="clr()" class="keypad">CLR</button>
+	<button onclick="bs()" class="keypad backspace">Backspace</button>
+	<br>
+	<button onclick="payb()" class="keypad">
+		<5>
+	</button>
+	<button onclick="oe()" class="keypad oe">Odd/Even</button>
+	<br>
+
+	<input type="number" id="input1">
+	<br>
+	<input type="number" id="input2">
+	<br>
+
+	<button id="btn1" onclick='changeHTML(this.id)'>Click Me 1!</button>
+	<button id="btn2" onclick='changeHTML("Hello 2")'>Click Me 2!</button>
+	<button id="btn3" onclick='changeHTML("Hello 3")'>Click Me 3!</button>
+
+	<!-- <script type="text/javascript"> -->
+	<!-- document.getElementById('btn').click = alert('hello world'); -->
+	<!-- </script> -->
+
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+
+	<script type="text/javascript">
+		function showMonth(val) {
+			var num = document.getElementById("select").value;
+			// switch(num){
+			// 	case "1":
+			// 	month = "January";
+			// 	break;
+			// 	case "2":
+			// 	month = "February";
+			// 	break;
+			// 	case "3":
+			// 	month = "March";
+			// 	break;
+			// 	case "4":
+			// 	month = "April";
+			// 	break;
+			// 	case "5":
+			// 	month = "May";
+			// 	break;
+			// 	case "6":
+			// 	month = "June";
+			// 	break;
+			// 	case "7":
+			// 	month = "July";
+			// 	break;
+			// 	case "8":
+			// 	month = "August";
+			// 	break;
+			// 	case "9":
+			// 	month = "September";
+			// 	break;
+			// 	case "10":
+			// 	month = "October";
+			// 	break;
+			// 	case "11":
+			// 	month = "November";
+			// 	break;
+			// 	case "12":
+			// 	month = "December";
+			// 	break;
+			// }
+			var month = [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December"];
+			document.getElementById("month").innerHTML = month[num - 1];
+		}
+
+
+		function display(num) {
+			document.getElementById("heading").innerHTML += num;
+		}
+
+		function compute(argument) {
+			document.getElementById("heading").innerHTML = eval(document.getElementById("heading").innerHTML);
+		}
+
+		function clr() {
+			document.getElementById("heading").innerHTML = "";
+		}
+
+		function bs() {
+			document.getElementById("heading").innerHTML = document.getElementById("heading").innerHTML.slice(0, -1);
+		}
+
+		function payb() {
+			var num = parseInt(document.getElementById("heading").innerHTML);
+
+			if (num > 5) {
+				console.log(num + " is greater than 5");
+			} else if (num < 5) {
+				console.log(num + " is less than 5");
+			} else {
+				console.log(num + " is equal to 5");
+			}
+		}
+
+		function oe() {
+			var num = parseInt(document.getElementById("heading").innerHTML);
+
+			if (num % 2 == 0) {
+				console.log(num + " is even");
+			} else {
+				console.log(num + " is odd");
+			}
+		}
+		// document.getElementById('heading').innerHTML = 'javascript'
+		function changeHTML(input) {
+			// document.getElementById('heading').innerHTML = 'Hello';
+			// document.getElementById('content').innerHTML = 'World';
+			// alert(document.getElementById("input1").value);
+			// var input1 = parseInt(document.getElementById("input1").value);
+			// var input2 = parseInt(document.getElementById("input2").value);
+			// alert(input1 + input2)
+			// document.getElementById("heading").innerHTML = input1+input2;
+			alert(input);
+		}
+	</script>
+
+</body>
+
+</html>
