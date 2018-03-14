@@ -1,0 +1,53 @@
+/* validation */
+
+.modal span {
+    font-size: 0.8rem;
+}
+
+/* comment */
+
+.active-amber-textarea.md-form label.active {
+    color: #ffa000;
+}
+
+.amber-textarea textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 0 #ffa000;
+}
+
+.amber-textarea.md-form .prefix.active {
+    color: #ffa000;
+}
+
+.active-amber-textarea-2 textarea.md-textarea {
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 0 #ffa000;
+}
+
+.active-amber-textarea-2.md-form label.active {
+    color: #ffa000;
+}
+
+.active-amber-textarea-2.md-form label {
+    color: #ffa000;
+}
+
+.active-amber-textarea-2.md-form .prefix {
+    color: #ffa000;
+}
+
+.addComment {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.editCommentTxt {
+    display: none;
+}
+
+html body a.disabledLink {
+    opacity: 0.65;
+    pointer-events: none;
+    cursor: default;
+}
